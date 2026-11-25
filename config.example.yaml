@@ -1,0 +1,21 @@
+# Hermes Agent CLI & Gateway Configuration Example
+_config_version: 53
+
+database:
+  journal_mode: "wal"
+  wal_autocheckpoint: 1000
+
+runtime:
+  nofile_soft_limit: 4096
+  malloc_arena_max: 4
+
+agent:
+  system_prompt_file: "SYSTEM_PROMPT.md"
+  memory_backend: "markdown_vault"
+  auto_compact_context: true
+
+platforms:
+  discord:
+    enabled: true
+    require_mention: false
+    free_response_channels: "*"
